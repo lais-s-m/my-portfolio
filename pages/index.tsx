@@ -15,6 +15,7 @@ import Title from '../components/Title';
 import { TitleContainer } from '../components/TitleContainer/styles';
 import WorkCardList from '../components/WorkCardList';
 import ProfileImg from '../images/profile_picture.png';
+import IconsBar from '../components/Icons';
 
 export default function Home() {
   return (
@@ -22,11 +23,11 @@ export default function Home() {
       <Head>
         <title>Hello, I'm Laís</title>
       </Head>
-      <NavBar />
       <LinkPage id='home_section' />
       <Main>
         <TitleContainer>
           <div>
+            <NavBar />
             <Subtitle>
               <TypeAnimation
                 sequence={[
@@ -44,11 +45,13 @@ export default function Home() {
             </Subtitle>
             <Title>Web Developer</Title>
             <Subtitle>based in Brazil</Subtitle>
+            <IconsBar />
             <a
               target='_blank'
               href='https://drive.google.com/file/d/1hP-G0EegQT_Z8eQH1RM5gz3qT_0nTknT/view?usp=sharing'
             >
-              <Button>Resume</Button>
+              <Button>Portfolio</Button>
+              <Button gradient>Curriculum</Button>
             </a>
           </div>
           <Image alt='profile picture' src={ProfileImg} />

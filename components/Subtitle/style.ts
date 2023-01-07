@@ -4,7 +4,7 @@ export const StyledSubtitle = styled.h3`
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  color: var(--matcha);
+  color: var(--light-dark);
 
   @media (min-width: 768px) {
     font-size: 30px;

@@ -5,7 +5,7 @@ export const StyledTitle = styled.h1`
   font-size: 20px;
   line-height: 40px;
   width: 120px;
-  color: var(--matcha);
+  color: var(--pink);
 
   @media (min-width: 425px) {
     font-size: 20px;

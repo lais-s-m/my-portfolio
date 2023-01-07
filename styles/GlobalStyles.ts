@@ -7,23 +7,21 @@ export default createGlobalStyle`
         box-sizing: border-box;
         outline: 0;
 
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-style: normal;
     }
 
     :root {
-        --dark-brown: #BC6C25;
-        --dark-brown-pastel: #D4A373;
-        --light-brown: #DDA15E;
-        --light-brown-pastel: #FAEDCD;
-        --bege: #FEFAE0;
-       --matcha: #74A12E;
+        --blue: #96BBE8;
+        --pink: #D9A5C1;
+        --white: #ffffff;
+        --light-dark: rgba(44, 47, 51, 0.8);
     }
 
     body {
         display: flex;
         justify-content: center;
-        background-color: var(--bege);
+        background: linear-gradient(70deg, var(--blue), var(--pink));
         padding: 0 5vw 0 5vw;
 
     }

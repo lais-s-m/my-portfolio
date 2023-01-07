@@ -1,27 +1,12 @@
-import styled, { keyframes } from 'styled-components';
-import { tada } from 'react-animations';
-
-const tadaAnimation = keyframes`${tada}`;
-
-export const Icons = styled.a`
-  &:hover {
-    animation: 1s ${tadaAnimation};
-  }
-`;
+import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: right;
 
-  position: fixed;
-  top: 0%;
-  left: 1%;
-  z-index: 2;
-  background-color: var(--bege);
-
-  width: 100vw;
+  width: 100%;
   height: 60px;
   color: var(--dark-brown);
 
@@ -42,7 +27,7 @@ export const StyledNav = styled.nav`
     gap: 10px;
 
     button {
-      font-weight: 400;
+      font-weight: 500;
       font-size: 18px;
       line-height: 27px;
 
@@ -50,10 +35,30 @@ export const StyledNav = styled.nav`
       background: none;
 
       a {
-        color: var(--dark-brown);
+        color: var(--light-dark);
+
+        h4 {
+          background-image: linear-gradient(70deg, var(--blue), var(--pink));
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-text-fill-color: transparent;
+
+          transition: 1s;
+
+          &:hover {
+            font-size: 20px;
+
+            @media (min-width: 768px) {
+              font-size: 23px;
+              transition: 1s;
+            }
+          }
+        }
 
         &:hover {
-          color: var(--dark-brown-pastel);
+          color: var(--blue);
           transition: 0.5s;
         }
       }
