@@ -58,11 +58,13 @@ export default function Home() {
             <Title>Web Developer</Title>
             <Subtitle>based in Brazil</Subtitle>
             <IconsBar />
+            <a href='#work_section'>
+              <Button>Portfolio</Button>
+            </a>
             <a
               target='_blank'
               href='https://drive.google.com/file/d/1hP-G0EegQT_Z8eQH1RM5gz3qT_0nTknT/view?usp=sharing'
             >
-              <Button>Portfolio</Button>
               <Button gradient>Curriculum</Button>
             </a>
           </div>

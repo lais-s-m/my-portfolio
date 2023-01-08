@@ -33,9 +33,8 @@ export const StyledButton = styled.button<ButtonProps>`
         font-weight: bold;
 
         &:hover {
-          font-size: 20px;
-          padding: 9px 10px 9px 10px;
-          transition: 1s;
+          animation-duration: 3s;
+          animation-name: bounce;
 
           @media (min-width: 768px) {
             font-size: 25px;
