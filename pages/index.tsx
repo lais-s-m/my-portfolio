@@ -63,7 +63,7 @@ export default function Home() {
             </a>
             <a
               target='_blank'
-              href='https://drive.google.com/file/d/1hP-G0EegQT_Z8eQH1RM5gz3qT_0nTknT/view?usp=sharing'
+              href='https://drive.google.com/file/d/1u1xgI1rpjIl0pxp1DbwiRYMrOKtcehEJ/view?usp=sharing'
             >
               <Button gradient>Curriculum</Button>
             </a>
