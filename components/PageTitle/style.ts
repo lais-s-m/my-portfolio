@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
-export const PageTitle = styled.h3`
-  font-weight: 800;
-  font-size: 28px;
+export const PageTitle = styled.div`
+  display: flex;
+  font-weight: 700;
+  font-size: 30px;
   text-align: left;
-  color: var(--dark-brown-pastel);
+  color: var(--white);
+
+  margin-bottom: 13px;
 
   @media (min-width: 768px) {
     font-size: 55px;

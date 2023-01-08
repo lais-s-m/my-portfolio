@@ -1,23 +1,28 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import { TypeAnimation } from 'react-type-animation';
+import { useInView } from 'react-intersection-observer';
 
 import Button from '../components/Button';
 import { LinkPage } from '../components/LinkPage/style';
 import { Main } from '../components/Main/style';
 import NavBar from '../components/NavBar';
-import { PageContainer } from '../components/PageContainer/style';
 import { PageTitle } from '../components/PageTitle/style';
 import Subtitle from '../components/Subtitle';
 import { TextField } from '../components/TextField/style';
 import Title from '../components/Title';
-import { TitleContainer } from '../components/TitleContainer/styles';
+import { Container } from '../components/Container/styles';
 import WorkCardList from '../components/WorkCardList';
-import ProfileImg from '../images/profile_picture.png';
+import ProfileImg from '../images/profile.png';
 import IconsBar from '../components/Icons';
 
 export default function Home() {
+  const { ref: mainContainer, inView: mainContainerIsVisible } = useInView();
+  const { ref: aboutContainer, inView: aboutContainerIsVisible } = useInView();
+
+  const { ref: aboutTitle, inView: aboutTitleIsVisible } = useInView();
+  const { ref: portfolioTitle, inView: portfolioTitleIsVisible } = useInView();
   return (
     <>
       <Head>
@@ -25,7 +30,11 @@ export default function Home() {
       </Head>
       <LinkPage id='home_section' />
       <Main>
-        <TitleContainer>
+        <Container
+          mainContainer
+          ref={mainContainer}
+          className={`${mainContainerIsVisible ? 'animate-container' : ''}`}
+        >
           <div>
             <NavBar />
             <Subtitle>
@@ -54,11 +63,21 @@ export default function Home() {
               <Button gradient>Curriculum</Button>
             </a>
           </div>
-          <Image alt='profile picture' src={ProfileImg} />
-        </TitleContainer>
-        <PageContainer>
-          <LinkPage id='about_section' />
-          <PageTitle>about.</PageTitle>
+          <section>
+            <Image alt='profile picture' src={ProfileImg} quality={100} />
+          </section>
+        </Container>
+        <LinkPage id='about_section' />
+        <PageTitle
+          ref={aboutTitle}
+          className={`${aboutTitleIsVisible ? 'animate-fade-in-right' : ''}`}
+        >
+          About.
+        </PageTitle>
+        <Container
+          ref={aboutContainer}
+          className={`${aboutContainerIsVisible ? 'animate-container' : ''}`}
+        >
           <TextField>
             After my two-year exchange in Japan, a country surrounded by
             technology, I decided to change careers completely. I was approved
@@ -74,10 +93,17 @@ export default function Home() {
             as a programmer, to learn more and more and to challenge myself
             every day.
           </TextField>
-          <LinkPage id='work_section' />
-          <PageTitle>work.</PageTitle>
-          <WorkCardList />
-        </PageContainer>
+        </Container>
+        <LinkPage id='work_section' />
+        <PageTitle
+          ref={portfolioTitle}
+          className={`${
+            portfolioTitleIsVisible ? 'animate-fade-in-right' : ''
+          }`}
+        >
+          Portfolio.
+        </PageTitle>
+        <WorkCardList />
       </Main>
     </>
   );

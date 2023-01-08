@@ -13,6 +13,13 @@ export const Main = styled.main`
     width: 80%;
   }
 
+  section {
+    max-width: 550px;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
   @media (min-width: 758px) {
     margin: 100px 0px 70px 0px;
   }

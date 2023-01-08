@@ -26,7 +26,7 @@ const projects = [
     github: 'https://github.com/lais-s-m/Hamburguer-Shop',
     name: 'Hamburguer Shop',
     description:
-      'A simple e-commerce, in which you can add and remove products from your cart. Built in JavaScript and Next.js. For styling, styled-components was used.',
+      'A simple e-commerce, in which you can add and remove products from your cart. The mobile layout is different from the layout for computers. Built in JavaScript and Next.js. For styling, styled-components was used.',
     image: HamburguerShopImg,
   },
   {

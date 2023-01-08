@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { fadeIn, fadeInRight } from 'react-animations';
 
 export default createGlobalStyle`
  *{
@@ -21,9 +22,8 @@ export default createGlobalStyle`
     body {
         display: flex;
         justify-content: center;
+        align-items: center;
         background: linear-gradient(70deg, var(--blue), var(--pink));
-        padding: 0 5vw 0 5vw;
-
     }
 
     button {
@@ -37,5 +37,15 @@ export default createGlobalStyle`
 
     ul {
         list-style: none;
+    }
+
+    .animate-container{
+        animation-duration: 3s;
+        animation-name: fadeIn;
+    }
+
+    .animate-fade-in-right{
+        animation-duration: 3s;
+        animation-name: fadeInRight;
     }
 `;

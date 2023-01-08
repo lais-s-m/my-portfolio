@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const TextField = styled.p`
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 20px;
-  width: 100%;
 
-  color: var(--matcha);
+  color: var(--pink);
 
   a {
     color: var(--matcha);

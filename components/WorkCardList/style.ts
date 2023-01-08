@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const CardList = styled.ul`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
 
@@ -25,5 +26,9 @@ export const CardList = styled.ul`
       padding: 5px;
       margin-bottom: 10px;
     }
+  }
+
+  @media (min-width: 1500px) {
+    flex-direction: row;
   }
 `;

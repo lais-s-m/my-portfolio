@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { wobble } from 'react-animations';
+
 export const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
@@ -36,6 +38,7 @@ export const StyledNav = styled.nav`
 
       a {
         color: var(--light-dark);
+        font-weight: 600;
 
         h4 {
           background-image: linear-gradient(70deg, var(--blue), var(--pink));
@@ -48,12 +51,8 @@ export const StyledNav = styled.nav`
           transition: 1s;
 
           &:hover {
-            font-size: 20px;
-
-            @media (min-width: 768px) {
-              font-size: 23px;
-              transition: 1s;
-            }
+            animation-duration: 5s;
+            animation-name: wobble;
           }
         }
 

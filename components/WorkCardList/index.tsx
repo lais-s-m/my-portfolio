@@ -2,6 +2,9 @@ import { StaticImageData } from 'next/image';
 import projects from '../../database/projects';
 import WorkCard from '../WorkCard';
 import { CardList } from './style';
+import { Container } from '../Container/styles';
+
+import { useInView } from 'react-intersection-observer';
 
 interface inProject {
   image: StaticImageData | undefined;
@@ -12,16 +15,20 @@ interface inProject {
 }
 
 const WorkCardList = () => {
+  const { ref: workContainer, inView: containerIsVisible } = useInView();
   return (
-    <CardList>
+    <CardList
+      ref={workContainer}
+      className={`${containerIsVisible ? 'animate-container' : ''}`}
+    >
       {projects.map((project: inProject, index) => (
         <WorkCard
-          key={index}
           image={project.image}
           name={project.name}
           link={project.link}
           github={project.github}
           description={project.description}
+          key={index}
         />
       ))}
     </CardList>

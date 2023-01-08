@@ -7,4 +7,12 @@ export const Icons = styled.a`
   &:hover {
     animation: 1s ${tadaAnimation};
   }
+  padding-right: 8px;
+`;
+
+export const StyledNav = styled.nav`
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 10px;
 `;

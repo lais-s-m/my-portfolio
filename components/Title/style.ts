@@ -2,21 +2,20 @@ import styled from 'styled-components';
 
 export const StyledTitle = styled.h1`
   font-weight: 800;
-  font-size: 20px;
+  font-size: 45px;
   line-height: 40px;
   width: 120px;
   color: var(--pink);
 
   @media (min-width: 425px) {
-    font-size: 20px;
+    font-size: 50px;
     line-height: 40px;
-    width: 150px;
   }
 
   @media (min-width: 768px) {
-    font-size: 45px;
-    width: 250px;
-    line-height: 80px;
+    font-size: 40px;
+    line-height: 50px;
+    width: 100px;
   }
 
   @media (min-width: 1024px) {
