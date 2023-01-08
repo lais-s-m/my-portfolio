@@ -34,7 +34,7 @@ export const StyledButton = styled.button<ButtonProps>`
 
         &:hover {
           animation-duration: 3s;
-          animation-name: bounce;
+          animation-name: wobble;
 
           @media (min-width: 768px) {
             font-size: 25px;
