@@ -9,15 +9,15 @@ export const StyledButton = styled.button<ButtonProps>`
 
   border-radius: 8px;
 
-  box-shadow: 10px 10px 257px 36px rgba(171, 166, 166, 0.57);
-  -webkit-box-shadow: 10px 10px 257px 36px rgba(171, 166, 166, 0.57);
-  -moz-box-shadow: 10px 10px 257px 36px rgba(171, 166, 166, 0.57);
+  -webkit-box-shadow: 10px 10px 45px -10px rgba(199, 199, 199, 1);
+  -moz-box-shadow: 10px 10px 45px -10px rgba(199, 199, 199, 1);
+  box-shadow: 10px 10px 45px -10px rgba(199, 199, 199, 1);
 
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 8px;
 
-  padding: 10px;
+  padding: 8px;
 
   color: white;
   transition: 1s;

@@ -23,6 +23,9 @@ export default function Home() {
 
   const { ref: aboutTitle, inView: aboutTitleIsVisible } = useInView();
   const { ref: portfolioTitle, inView: portfolioTitleIsVisible } = useInView();
+
+  const { ref: profileImage, inView: profileImageIsVisible } = useInView();
+
   return (
     <>
       <Head>
@@ -63,7 +66,10 @@ export default function Home() {
               <Button gradient>Curriculum</Button>
             </a>
           </div>
-          <section>
+          <section
+            ref={profileImage}
+            className={`${profileImageIsVisible ? 'animate-profile-img' : ''}`}
+          >
             <Image alt='profile picture' src={ProfileImg} quality={100} />
           </section>
         </Container>

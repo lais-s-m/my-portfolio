@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { fadeIn, fadeInRight } from 'react-animations';
 
 export default createGlobalStyle`
  *{
@@ -46,6 +45,11 @@ export default createGlobalStyle`
 
     .animate-fade-in-right{
         animation-duration: 3s;
-        animation-name: fadeInRight;
+        animation-name: bounce;
+    }
+
+    .animate-profile-img {
+        animation-duration: 3s;
+        animation-name: headShake;
     }
 `;
