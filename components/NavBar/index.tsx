@@ -12,7 +12,7 @@ const NavBar = () => (
       <button>
         <a
           target='_blank'
-          href='https://drive.google.com/file/d/1u1xgI1rpjIl0pxp1DbwiRYMrOKtcehEJ/view?usp=sharing'
+          href='https://drive.google.com/file/d/1aa8qjdjIy2zsP-EG682650GJ2upi5Hjw/view?usp=sharing'
         >
           <h4>Curriculum</h4>
         </a>
